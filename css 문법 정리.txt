@@ -1,0 +1,135 @@
+</--본문
+--> 
+주석처리.
+
+<style> </style>
+-> 이 태그 안쪽에 있는건 css 문법에 따라 처리하라는 태그.
+
+a {                                 -> selecter(선택자)
+	color:red;          -> declaration(효과)
+}
+-> a태그가 붙은 것들을 다 빨간색으로.
+
+=>일괄적으로 하는 방법.
+
+하나씩 하려면,
+style="color:red"                 ->color는 property, red는 value.
+이걸 html 태그 안에다가.
+
+text-decoration:none 
+-> 밑줄같은것들이 없어짐. 디폴트상태의 텍스트로 바꿔줌
+
+두 가지 이상의 속성을 해주려면
+style="color:red; text-decoration:underline"
+세미콜론으로 구분해서 적어줌.
+
+font-size:~~px
+-> 글씨 크기 조절.
+
+text-align:center
+-> left, right 등으로 정렬.
+
+class="saw"
+-> saw라는 클래스로 지정.
+그리고 style 태그 안에다가
+.saw{
+	color:gray;
+}
+->하면 class로 지정된 것들 일괄적으로 css 속성 부여.
+
+class="saw active"로 해놓고
+.active{~~}
+해주면, saw와 active라는 두 개의 클래스를 갖게됨.
+그리고 아래에 있는 .active 선택자의 영향을 받게됨.
+=> 좋은 방법은 아니다.
+
+id="active"
+#active { ~~}
+하면 class보다 id의 우선순위가 높기 때문에 class에서 명령한거보다 우선적으로 적용됨.
+
+태그 선택자 < class 선택자 < id 선택자 순으로 우선순위가 높음.
+우선순위가 같으면 더 나중에 명령된것이 적용.
+
+*** id 선택자는 단 한 번만 등장해야함.
+
+<style>
+h1{ border-width:5px;
+border-color:red;
+border-style:solid;
+}
+</style>
+-> tag가 차지하는 부피를 알수있다. 테두리를 그려주는 코드.
+
+/*
+*/
+ -> css에서의 주석처리
+
+화면 전체를 쓰는 정도의 태그 : block level element ex)h1
+본인 부피만큼만 쓰는 정도의 태그 : inline element ex)a
+
+display:inline 
+->태그가 차지하는 크기를 본인 부피만큼만 바꿔줌.
+display:block
+-> 태그가 차지하는 크기를 화면 전체로 바꿔줌.
+display:none
+-> 아예 사라짐.
+
+h1, a{ ~~~}
+선택자를 ,로 연결해줄 수 있다.
+
+border-width:~~; border-color;~~
+는
+border:5px solid red;
+로 바꿔서 간결하게 바꿔줄 수 있다.
+
+박스와 컨텐츠 사이 여백 설정은?
+padding:~~px;
+
+margin:~~px;
+테두리와 테두리 사이 간격 설정.
+
+width:~~px;
+박스의 폭을 설정. 높이는 height.
+
+border-bottom :~~;
+라고 하면, 아래쪽 테두리만 적용.
+
+개발자도구를 이용해서 디자인 손보기.
+
+
+<div>~~</div>
+-> 디자인의 용도로만 쓰는 태그. 화면 전체를 쓰는 태그.
+<span>~~</span>
+-> 마찬가지인데 본인 부피만큼만 쓰는 태그
+
+그리드로 묶기 전, div로 한번 더 묶어줌.
+<div id="~~">
+
+<style>
+#~~{
+	border:~~;
+	display:grid;
+	grid-template-columns:150px(부피) 1fr(나머지공간전체);
+	}	
+-> fr: 화면전체의 비율.
+
+#asdf ol{ ~~; }
+-> asdf아이디 안에 있는 ol태그에만 적용.
+
+미디어쿼리 : 반응형. - 화면의 크기가 어느 정도냐에 따라
+@media(min-width:800px)
+{	div{display:none;
+	}
+}
+
+@media(max-width:800px)
+{
+	#grid{display:block;}
+	#grid ol{border-right:none;}
+	h1{border-bottom:none;}
+}
+
+css파일 따로 만들기.
+style.css 로 저장.
+그리고 html파일에 
+<link rel="stylesheet" href="style.css"> 를 헤드부분에 추가.

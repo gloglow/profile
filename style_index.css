@@ -1,0 +1,45 @@
+*{
+  font-family: '나눔바른고딕';
+  line-height: 1.7;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 1px;
+  word-spacing: 7px;
+  border-bottom:2.5px black solid;
+  padding-bottom: 30px;
+  margin-top:50px;
+  margin-bottom: 50px;
+  margin-left:150px;
+  margin-right:150px;
+}
+#top_info{
+  display:grid;
+  text-align: center;
+  grid-template-columns:1fr 1fr;
+}
+#top_info img{
+  padding-left: 170px;
+  padding-right: 70px;
+  border-right: 1px black solid;
+}
+#top_info #basic_info{
+  text-align: left;
+  font-size: 20px;
+  line-height: 3;
+  margin-top: 10%;
+  padding-left: 30px;
+}
+#top_info a{
+  text-decoration: underline;
+}
+#detail_info{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+}
