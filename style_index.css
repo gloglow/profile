@@ -43,15 +43,19 @@ h1{
 }
 #detail_info{
   display:grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   margin-top: 20px;
   padding-left: 10%;
   padding-right: 10%;
 }
-#detail_info #period h2{
+#detail_info #band_list{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+#detail_info #band_period h2{
   color:white;
 }
-#detail_info #period ul{
+#detail_info #band_period ul{
   list-style: none;
   padding-left: 0px;
 }
@@ -71,13 +75,16 @@ h1{
     padding-right: 0px;
   }
   #top_info #basic_info{
-    font-size:4vw;
+    font-size:3.5vw;
   }
   #detail_info{
     display:block;
     padding-left: 70px;
   }
-  #detail_info #period{
-    display: none;
+  #detail_info #band_period{
   }
+  #detail_info h2{
+    font-size: 3.5vw;
+  }
+
 }
