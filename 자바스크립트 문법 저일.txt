@@ -1,0 +1,19 @@
+<script> ~~</script>
+: 웹브라우저가 자바스크립트로 인식하도록
+해주는 태그
+
+<input type="button" value="@@" onclick="alert('hi')">
+: @@라고 쓰인 버튼 생성
+누르면 hi라고 쓰인 경고창 뜨움
+
+<input type="text" onchange="alert('changed')">
+: 텍스트 입력창 생성.
+거기에 적힌게 달라지면 경고창.
+
+<input type="text" onkeydown="alert('key down')>
+: 어떤 글자든 입력할때마다 경고창.
+
+파일을 만들지 않고도 웹페이지의 검사-console 창에서 자바스크립트를 바로바로 실행하는것이 가능.
+
+alert('~~~(문자)~~~'.length)
+: 문자열의 문자 갯수를 경고창을 통해 알 수 있다

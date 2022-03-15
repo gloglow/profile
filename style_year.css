@@ -1,0 +1,48 @@
+*{
+  font-family: '나눔바른고딕';
+  line-height: 1.7;
+}
+a{
+  text-decoration: none;
+  color:black;
+}
+h1{
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 1px;
+  word-spacing: 7px;
+  border-bottom:2.5px black solid;
+  padding-bottom: 30px;
+  margin-top:50px;
+  margin-bottom: 50px;
+  margin-left:150px;
+  margin-right:150px;
+}
+.contents{
+  margin-left: 10%;
+}
+.contents a{
+  text-decoration: underline;
+}
+.contents a:before{
+  content:"→ ";
+}
+@media(max-width:670px)
+{
+  h1{
+    font-size: 7vw;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .contents{
+    margin-left: 3%;
+    word-break:keep-all;
+    font-size: 3vw;
+  }
+  .contents h2{
+    font-size: 5vw;
+  }
+  .contents h3{
+    font-size: 3.5vw;
+  }
+}
